@@ -17,6 +17,19 @@ public class Employee{
 		salary = 0;
 	}
 	
+	//Full Constructor
+	public Employee(String Name, int HireYear, int HireMonth, int HireDay, double Salary){
+		this.name = Name;
+		this.salary = Salary;
+		
+		GregorianCalendar g = new GregorianCalendar(HireYear, HireMonth-1, HireDay);
+		hireDate = g.getTime();
+	}
+	
+	publi int getId(){
+		return(ID);
+	}
+	
 	static{
 		int min_id = 100, max_id = 200;
 		
