@@ -15,6 +15,18 @@ public class Employee{
 	public Employee(){
 		name = "Anonymous";
 		salary = 0;
+		
+		GregorianCalendar g = new GregorianCalendar();
+		hireDate = g.getTime();
+	}
+	
+	//Constructor(only name and salary)
+	public Employee(String Name, double Salary){
+		this.name = Name;
+		this.salary = Salary;
+		
+		GregorianCalendar g = new GregorianCalendar();
+		hireDate = g.getTime();
 	}
 	
 	//Full Constructor
@@ -26,8 +38,26 @@ public class Employee{
 		hireDate = g.getTime();
 	}
 	
-	publi int getId(){
+	public int getId(){
 		return(ID);
+	}
+	
+	public String getName(){
+		return(name);
+	}
+	
+	public Date getHireDate(){
+		return(hireDate);
+	}
+	
+	
+	public double getSalary(){
+		return(salary);
+	}
+	
+	
+	public void raiseSalary(double percent){
+		salary += salary/100*percent; 
 	}
 	
 	static{
