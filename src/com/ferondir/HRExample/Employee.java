@@ -60,12 +60,16 @@ public class Employee{
 		salary += salary/100*percent; 
 	}
 	
+	public String getPosition(){
+		return("Employee");
+	}
+	
 	static{
 		int min_id = 100, max_id = 200;
 		
 		Random generator = new Random();
 		NEXT_ID = min_id + generator.nextInt(max_id - min_id); //Generate random start ID in diapason min_id..max_id
-		System.out.println(NEXT_ID);
+		//System.out.println(NEXT_ID);
 	}
 	
 	{
